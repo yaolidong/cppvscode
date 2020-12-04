@@ -13,6 +13,7 @@ struct Books{
 
 int main()
 {
+    Books *book3 = new Books;
     Books book1;
     Books book2;
 
@@ -27,15 +28,25 @@ int main()
     printbook(book1);
     printbook(book2);
 
+    cout<<"Please Enter the name of book3:"<<endl;
+    cin>>book3->book_id;
+    cin.get();
+    cout<<"Please Enter the title of book3:"<<endl;
+    cin.get(book3->title,50);
+    cin.get();
+    cout<<"Please Enter the auther of book3"<<endl;
+    cin.get(book3->auther,50);
 
+    cout<<"The name of book3 is "<<book3->book_id<<". It`s title is "<<book3->title<<" and it`s auther is"<<book3->auther<<endl;
 
-    struct Books *points;
+    delete book3;
+    // struct Books *points;
 
-    points = &book1;
+    // points = &book1;
 
-    cout<<points->auther<<endl;
-    cout<<points->book_id<<endl;
-    cout<<points->title<<endl;
+    // cout<<points->auther<<endl;
+    // cout<<points->book_id<<endl;
+    // cout<<points->title<<endl;
 
     return 0;
 
