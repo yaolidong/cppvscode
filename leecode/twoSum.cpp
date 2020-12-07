@@ -17,13 +17,13 @@ class Solution{
             if(*i + *j ==target)
             {
                  k.push_back(account_i);
-                 k.push_back(account_j);
-                 return k;   
+                 k.push_back(account_j);  
             }
             account_j++;
         }
         account_i++;
     }
+    return k;
     }
 
 };
