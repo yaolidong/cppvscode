@@ -6,34 +6,42 @@ using namespace std;
 class Solution{
     int traget;
     public:
-    void twoSum(vector<int> &nums,int target){
-    int account_i = 0;
+    vector<int> twoSum(vector<int> &nums,int target){
+    vector<int> k;
+    int account_i =0;
     for(vector<int> ::iterator i = nums.begin();i !=nums.end();i++){
-        int account_j = account_i+1;
+        int account_j =account_i+1;
         for(vector<int> ::iterator j = i+1; j!=nums.end();j++)
         {
             
             if(*i + *j ==target)
             {
-                cout<<"nums["<<account_i<<"] is"<<*i<<", nums["<<account_j<<"] is"<<*j<<endl;
-                
+                 k.push_back(account_i);
+                 k.push_back(account_j);
+                 return k;   
             }
-            account_j ++;
+            account_j++;
         }
-        account_i ++;
+        account_i++;
     }
     }
 
 };
 int main(){
-    vector<int> vec ;
+    vector<int> vec;
+    vector<int> con;
+    vec.push_back(2);
+    vec.push_back(11);
+    vec.push_back(7);
+    vec.push_back(12);
+
     int target = 9;
-    for(int i = 0; i < 10;i++)
-    {
-        vec.push_back(i);
-    }
-    
+
     Solution s;
-    s.twoSum(vec,target);
+    con = s.twoSum(vec,target);
+    for(vector<int> ::iterator s =con.begin();s!=con.end();s++)
+    {
+        cout<<*s<<endl;    
+    }
     return 0;
 }
