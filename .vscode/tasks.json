@@ -16,7 +16,7 @@
           "${fileDirname}/${fileBasenameNoExtension}"
         ],
         "options": {
-          "cwd": "${workspaceFolder}"
+          "cwd": "/usr/bin"
         },
         "problemMatcher": ["$gcc"],
         "group": {
